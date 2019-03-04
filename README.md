@@ -53,7 +53,7 @@ Para esto Ud. debe:
 
 5. (5%) Cree el método `createRecipe` en la clase `RecipeResource` que recibe el cuerpo de la receta, solicita la creación de la receta y retorna la receta con su nuevo id.
 
-6. (5%) Cree una colección de postman para probar tanto al creación como las reglas de negocio asociadas. Exporte la colección y guardela en la carpeta collections del proyecto s4_recipes-api.
+6. (5%) Cree una colección de postman para probar tanto al creación como las reglas de negocio asociadas. Exporte la colección y guardela en la carpeta collections del proyecto s4_recipes-api. Esta colección debe estar parametrizada para correr las pruebas automáticamente.
 
 Al finalizar suba los cambios y cree un release con el nombre `punto_1`
 
@@ -93,7 +93,7 @@ Si las reglas de negocio se cumplen, se debe llamar la persistencia para que el 
 
 7. (10%) Modifique la prueba unitaria `createRecipe` de la capa de lógica para que ahora valide si la lista de ingredientes que se almacena es correcta.
 
-8. (10%) Cree una colección de postman para probar tanto al creación como las reglas de negocio asociadas. Exporte la colección y guardela en la carpeta collections del proyecto s4_recipes-api. Puede apoyarse en los siguientes escenarios de prueba
+8. (10%) Cree una colección de postman para probar tanto al creación como las reglas de negocio asociadas. Exporte la colección y guardela en la carpeta collections del proyecto s4_recipes-api. Puede apoyarse en los siguientes escenarios de prueba. Esta colección debe estar parametrizada para correr las pruebas automáticamente.
 
 ### Escenarios de prueba
 
@@ -106,23 +106,6 @@ Si las reglas de negocio se cumplen, se debe llamar la persistencia para que el 
 }
 ```
 Respuesta: 412, no hay ingredientes en la receta
-
----
-
-`POST localhost:8080/s4_recipes-api/api/recipes/`
-
-```json
-{
-    "name": "Tacos de pollo",
-    "description": "Los mismos de antes pero más ricos",
-    "ingredients": [{
-        "name": "Tomate",
-		    "calories": 1000
-    }]
-}
-```
-
-Respuesta: 412, ya existe esa receta
 
 ---
 
@@ -143,6 +126,22 @@ Respuesta: 412, ya existe esa receta
 
 Respuesta: 200, ok
 ```
+
+`POST localhost:8080/s4_recipes-api/api/recipes/`
+
+```json
+{
+    "name": "Tacos al pastor",
+    "description": "Los mismos de antes pero más ricos",
+    "ingredients": [{
+        "name": "Tomate",
+		    "calories": 1000
+    }]
+}
+```
+
+Respuesta: 412, ya existe esa receta
+---
 
 Al finalizar suba los cambios y cree un release con el nombre `punto_2`
 
