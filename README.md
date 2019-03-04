@@ -125,6 +125,7 @@ Respuesta: 412, no hay ingredientes en la receta
 }
 ```
 Respuesta: 200, ok
+
 ---
 
 `POST localhost:8080/s4_recipes-api/api/recipes/`
@@ -141,6 +142,7 @@ Respuesta: 200, ok
 ```
 
 Respuesta: 412, ya existe esa receta
+
 ---
 
 Al finalizar suba los cambios y cree un release con el nombre `punto_2`
