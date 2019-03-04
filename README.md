@@ -125,7 +125,7 @@ Respuesta: 412, no hay ingredientes en la receta
 }
 
 Respuesta: 200, ok
-```
+---
 
 `POST localhost:8080/s4_recipes-api/api/recipes/`
 
