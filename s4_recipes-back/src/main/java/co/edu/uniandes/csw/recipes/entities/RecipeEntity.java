@@ -5,14 +5,23 @@
  */
 package co.edu.uniandes.csw.recipes.entities;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import uk.co.jemos.podam.common.PodamExclude;
 
 /**
  *
  * @author CesarF
  */
 @Entity
-public class RecipeEntity extends BaseEntity {
+public class RecipeEntity extends BaseEntity 
+{
+    @PodamExclude
+    @OneToMany(mappedBy = "ingrediente")
+    private List<RecipeEntity> ingredientes = new ArrayList<RecipeEntity>();
+    
     private String name;
     private String description;
     
